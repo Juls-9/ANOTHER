@@ -1,0 +1,226 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #081935;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  color: whitesmoke;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: white;
+  background-color: rgb(255, 255, 255, 0.1);
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 20px;
+  margin: 0;
+  right: 1px;
+  padding: 5px;
+  transition: 1s;
+}
+
+.sidebar .closebtn:hover {
+  background-color: none;
+  border: none;
+  color: rgb(255, 0, 0);
+  background-color: #081935;
+  transition: 1s;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  margin-bottom: 0px;
+  height: 10px;
+  color: white;
+}
+
+ul.flex {
+  margin-bottom: 0px;
+  height: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.menu {
+  color: white;
+  position: relative;
+  top: 1px;
+  left: 20px;
+  margin-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+  gap: 5px;
+  background-color: #081935;
+}
+
+.flex li {
+  list-style: none;
+  color: black;
+  margin-top: 6px;
+}
+
+.containers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  text-align: center;
+  margin: 5px;
+}
+
+.items {
+  padding: 45px;
+  background-color: #ffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.containers a .items {
+  font-size: 19px;
+  color: black;
+}
+
+.containers a:hover .items {
+  background-color: lightblue;
+}
+
+.containers a:visited .items {
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+  padding-left: 10px;
+  opacity: 0; /* Initially hide the items */
+  transform: translateY(-10px); /* Move the items up */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.dropdown-content.show {
+  max-height: 200px; /* Adjust the maximum height as needed */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  font-size: 13px;
+  border-left: 1px solid white;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.dropdown-content.show a {
+  opacity: 1; /* Show the items */
+  transform: translateY(0); /* Move the items to their original position */
+}
+.show {
+  display: block;
+}
+
+ul.flex {
+  height: 60px;
+}
+
+.title {
+  margin-top: 15px;
+}
+
+
+
+p.logo {
+  border: none;
+  width: fit-content;
+  margin-top: 5px;
+  color: rgb(255, 255, 255);
+  font-family: 'Nunito', sans-serif;
+  width: fit-content;
+  text-shadow: 0 0 10px #282829;
+  font-weight: bold;
+}
+
+.openbtn {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #081935;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: fit-content;
+  height: fit-content;
+  top: 20px;
+  left: 10px;
+  transition: background-color 0.5s, color 0.5s, width 0.5s, transform 0.5s; /* Include transform in the transition */
+  margin-right: 10px;
+}
+
+.openbtn:hover {
+  color: rgb(212, 255, 0);
+  transform: rotate(-50deg); /* Rotate when hovering */
+}
+
+.openbtn::after {
+  content: "";
+  background-color: rgb(254, 254, 255);
+  color: #081935;
+  width: 100px;
+  transition: background-color 0.5s, color 0.5s, width 0.5s;
+}
+
+.background {
+  background-color: #dddfe0;
+}
+
+.hrms {
+  font-family: 'Noto Serif', serif;
+  margin-top: 10px;
+  width: 200px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.0em;
+  height: fit-content;
+  /* Adding linear gradient background */
+  background: linear-gradient(90deg, rgba(0, 229, 255, 0.981), rgb(244, 244, 244));
+  -webkit-background-clip: text;
+  color: transparent;
+  /* Border styles */
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, rgba(136, 2, 254, 0.981) 0%, rgba(3, 0, 255, 1) 90%);
+  border-image-slice: 1;
+  border-bottom: 2px solid transparent;
+}
